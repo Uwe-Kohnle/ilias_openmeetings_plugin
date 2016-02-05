@@ -1,0 +1,57 @@
+ILIAS Openmetings Plugin Change Log
+
+ver 1.0.10
+support for ILIAS 5.1
+
+ver 1.0.9
+allow launching Openmeetings in a new window
+support Availability
+
+ver 1.0.8
+fix for Openmeetings 3.0.5 and 3.0.6 (3.0.4 not supported!)
+support for ILIAS 5.0
+minor bugfixes
+
+ver 1.0.7
+minor bugfixes
+
+ver 1.0.6
+minor bugfixes
+
+ver 1.0.5
+fix Bug with Openmeeting 2.0
+
+ver 1.0.4
+tested with ILIAS 4.2.1 and ILIAS 4.4 beta
+changes in language files
+
+ver 1.0.3
+fix bug reading data for rooms with (deleted) organisations
+added new language files for english and french
+
+ver 1.0.2
+appname could be modified
+minor changes
+
+ver 1.0.1
+settings for rooms adjustable by administrator
+support of openmeetings 2.1
+
+ver 1.0
+change to REST instead of SOAP
+support of openmeetings 2.0
+
+ver 0.7
+utf-8-support in class.ilOpenMeetingsSOAP.php
+German language file
+
+ver 0.3
+
+
+ver .02
+Removed all project specific code and references
+Modified language files to be generic
+Made configuration screen generic with hidden fields to be added as selection option later upon user requests
+
+ver .01
+Internal code release for intrnal project

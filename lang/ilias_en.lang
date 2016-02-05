@@ -1,0 +1,96 @@
+// 
+// English Language File for Openmeetings Plugin
+//
+<!-- language file start -->
+obj_xomv#:#Openmeetings VC
+objs_xomv#:#Openmeetings Virtual Classrooms
+obj_xomv_duplicate#:#Copy 
+objs_xomv_duplicate#:#Copy Openmeetings Virtual Classroom
+obj_xomv_select#:#Select Openmeetings Virtual Classroom
+xomv_add#:#Add Openmeetings Virtual Classroom
+xomv_new#:#Add New Openmeetings Virtual Classroom
+xomv_read#:#Read access to Openmeetings Virtual Classroom
+xomv_write#:#Edit Openmeetings Virtual Classroom
+xomv_delete#:#Delete Openmeetings Virtual Classroom
+xomv_visible#:#Openmeetings Virtual Classroom is visible
+xomv_edit_permission#:#Change permission settings
+openmeetings_plugin_configuration#:#Openmeeting Connection Properties
+saving_invoked#:#Settings saved
+url#:#URL
+port#:#Port
+username#:#Username
+password#:#Password
+crs_create_xomv#:#Create Openmeetings Virtual Classroom
+grp_create_xomv#:#Create Openmeetings Virtual Classroom
+fold_create_xomv#:#Create Openmeetings Virtual Classroom
+root_create_xomv#:#Create Openmeetings Virtual Classroom
+cat_create_xomv#:#Create Openmeetings Virtual Classroom
+content#:#Content#:#Create Openmeetings Virtual Classroom
+Connect#:#Connect
+connect_btn#:#connect
+comment#:#comment
+properties#:#Properties
+edit_properties#:#Edit Properties
+title#:#Title
+description#:#Description
+option_one#:#Option One
+option_two#:#Option Two
+save#:#Save
+cancel#:#Cancel
+edit#:#Edit
+status#:#Status
+offline#:#Offline
+rmispublic#:#Room is Public
+rmismoderated#:#Room is Moderated
+rmparticipants#:#Max Participants
+type#:#Type of Room
+rmisDemoRoom#:#Demo room
+rmallowUserQuestions#:#Allow user questions
+rmisAudioOnly#:#Audio only room
+rmhideTopBar#:#Hide topbar
+rmhideChat#:#Hide chat
+rmhideActivitiesAndActions#:#Hide activities
+rmhideFilesExplorer#:#Hide files explorer
+rmhideActionsMenu#:#Hide actions menu
+rmhideScreenSharing#:#Hide screen sharing
+rmhideWhiteboard#:#Hide whiteboard
+info_ismoderated#:#If the room is moderated, any user with a moderator or administrator level access are automatically set to moderator when they enter the room
+info_ispublic#:#If you add an usergroup to the room only users of that usergroup have access to it
+info_isDemoRoom#:#If you enable this option the room will be closed after 20 minutes.
+info_allowUserQuestions#:#Turn this off to prevent any user from disturbing you in this room
+info_isAudioOnly#:#Turn this flag on and the users will have only the audio option and no video in the conference room. This can be good to save bandwidth
+info_hideTopBar#:#You can hide the top bar (files, actions).
+info_hideChat#:#This option hides the Chat. Please consider, that the chat can prove useful for user feedback.
+info_hideActivitiesAndActions#:#This option is useful to reduce disturbance, but limits the users feedback options.
+info_hideFilesExplorer#:#Activate this option if you don't want to supply files.
+info_hideActionsMenu#:#If this option is activated, the functionality is reduced remarkably.
+info_hideScreenSharing#:#This option can be activated if security concerns exist.
+info_hideWhiteboard#:#In general the whiteboard is an integral part of the virtual classroom.
+info_om2x#:#Configuration options for Openmeetings 2.2 or higher (or https://svn.apache.org/repos/asf/openmeetings/branches/2.x since 26.09.2013)
+conf_isDemoRoom#:#Demo room
+conf_ispublic#:#Public
+conf_om2x#:#Openmeetings 2.2 or higher
+conf_om2x_allowUserQuestions#:#Allow user questions
+conf_om2x_isAudioOnly#:#Audio only room
+conf_om2x_hideTopBar#:#Hide topbar
+conf_om2x_hideChat#:#Hide chat
+conf_om2x_hideActivitiesAndActions#:#Hide activities
+conf_om2x_hideFilesExplorer#:#Hide explorer
+conf_om2x_hideActionsMenu#:#Hide menu
+conf_om2x_hideScreenSharing#:#Hide screen sharing
+conf_om2x_hideWhiteboard#:#Hide whiteboard
+appname#:#Directory
+om_start_option#:#How do you want to launch the virtual classroom?
+om_start_iframe#:#in this screen window
+om_start_iframe_only#:#Launch Virtual Classroom in this screen window
+om_start_iframe_auto#:#seconds until the automatic launch of the Virtual Classroom<br/>in this screen window. Please connect your headset.
+om_start_window#:#in a new window
+om_start_window_only#:#Launch Virtual Classroom in a new window
+om_start_window_auto#:#seconds until the automatic launch of the Virtual Classroom<br/>in a new window. Please connect your headset.
+om_start_stop#:#Cancel launch
+om_start_disable#:#seconds until cancellation of the launch option.
+om_start_disabled#:#The launch option was canceled.
+om_window_blocked#:#The Virtual Classroom could not be launched automatically in a new window.<br/>Allow a pop-up window or launch now manually.
+om_window_started#:#The Virtual Classroom was launched in a new window.
+om_window_closed#:#The virtual classroom has been terminated.
+om_reload#:#Reload this page

@@ -1,0 +1,96 @@
+// 
+// French Language File for Openmeetings Plugin
+//
+<!-- language file start -->
+obj_xomv#:#Classe virtuelle Openmeetings
+objs_xomv#:#Classes virtuelles Openmeetings
+obj_xomv_duplicate#:#Copier 
+objs_xomv_duplicate#:#Copier classes virtuelles Openmeetings
+obj_xomv_select#:#Selectionner classe virtuelle Openmeetings
+xomv_add#:#Ajouter
+xomv_new#:#Ajouter nouvelle classe Openmeetings
+xomv_read#:#Lecture
+xomv_write#:#Modification
+xomv_delete#:#Detruire
+xomv_visible#:#Visible
+xomv_edit_permission#:#Modifier les permissions
+openmeetings_plugin_configuration#:#Configuration
+saving_invoked#:#Enregistrement effectue
+url#:#URL	
+port#:#Port
+username#:#Nom utilisateur
+password#:#mot de pase
+crs_create_xomv#:#Creer Openmeetings Virtual Classroom
+grp_create_xomv#:#Creer Openmeetings Virtual Classroom
+fold_create_xomv#:#Creer Openmeetings Virtual Classroom
+root_create_xomv#:#Creer Openmeetings Virtual Classroom
+cat_create_xomv#:#Creer Openmeetings Virtual Classroom
+content#:#Content#:#Create Openmeetings Virtual Classroom
+Connect#:#Connexion
+connect_btn#:#Connexion
+comment#:#Commentaire
+properties#:#Parametres
+edit_properties#:#Modifier parametres
+title#:#Titre
+description#:#Description
+option_one#:#Option 1
+option_two#:#Option 2
+save#:#Enregistrer
+cancel#:#Annuler
+edit#:#Modifier
+status#:#Status
+offline#:#Hors Ligne
+rmispublic#:#Salle publique
+rmismoderated#:#Salle moderee
+rmparticipants#:#Nb de participants
+type#:#Type de salle
+rmisDemoRoom#:#Salle Démo
+rmallowUserQuestions#:#Accepter les questions
+rmisAudioOnly#:#Salle audio seulement
+rmhideTopBar#:#Cacher la barre supérieure
+rmhideChat#:#Cacher le t'chat
+rmhideActivitiesAndActions#:#Cacher les activités
+rmhideFilesExplorer#:#Cacher l'explorateur de fichiers
+rmhideActionsMenu#:#Cacher le menu des actions
+rmhideScreenSharing#:#Cacher le partage d'écran
+rmhideWhiteboard#:#Cacher le tableau blanc
+info_ismoderated#:#Si la salle est modérée, un utilisateur avec le niveau modérateur ou administrateur est automatiquement modérateur s'il entre dans la salle. Si vous ne voulez pas cette fonction et si vous voulez qu'un certain utilisateur devienne modérateur, utilisez l'option modérateur par défaut.
+info_ispublic#:#Les utilisateurs de Openmeetings peuvent entrer toutes les salles publiques. Ces utilisateurs ne sont pas nécessairement présent en Ilias.
+info_isDemoRoom#:#Si vous activez cette option, la salle sera ouverte seulement 20 minutes.
+info_allowUserQuestions#:#Si vous activez cette option le bouton pour demander la modération n'est pas visible pour d'autres utilisateurs, et vous n'êtez pas disturbé dans votre présentation.
+info_isAudioOnly#:#Avec cette option vous permettez seulement l'audio transmission et vous eteignez la video. Ca peut être utile pour réduire la bande passante.
+info_hideTopBar#:#Avec cette option vous pourriez cacher la complète barre supérieure (fichiers, actions).
+info_hideChat#:#Vous pouvez cacher le chat avec cette option. Considérez que le chat est souvent necessaire pour le feed-back des utilisateurs.
+info_hideActivitiesAndActions#:#Avec cette option vous pourriez réduire des perturbations, mais limitez la possibilité des utilisateurs de donner du feed-back.
+info_hideFilesExplorer#:#Activez cette options, si vous n'avez pas de fichiers à mettre à la disposition.
+info_hideActionsMenu#:#Si vous activez cette option, l'extension de la fonctionnalité sera reduite clairement.
+info_hideScreenSharing#:#Activez cette option en doute de la sécurité.
+info_hideWhiteboard#:#Normalement le tableau blanc est un élément central de la salle de classe virtuelle.
+info_om2x#:#Paramètres pour Openmeetings 2.2 ou après
+conf_isDemoRoom#:#Salle Démo
+conf_ispublic#:#Publique
+conf_om2x#:#Openmeetings 2.2 ou après
+conf_om2x_allowUserQuestions#:#ajustable: Accepter des questions des utilisateurs
+conf_om2x_isAudioOnly#:#ajustable: Salle audio seulement
+conf_om2x_hideTopBar#:#ajustable: Cacher la barre supérieure
+conf_om2x_hideChat#:#ajustable: Cacher le chat
+conf_om2x_hideActivitiesAndActions#:#ajustable: Cacher les activités
+conf_om2x_hideFilesExplorer#:#ajustable: Cacher l'explorateur de fichiers
+conf_om2x_hideActionsMenu#:#ajustable: Cacher le menu des actions
+conf_om2x_hideScreenSharing#:#ajustable: Cacher le partage d'écran
+conf_om2x_hideWhiteboard#:#ajustable: Cacher le tableau blanc
+appname#:#Dossier
+om_start_option#:#Comment voulez-vous lancer la classe virtuelle?
+om_start_iframe#:#dans cette fenêtre de l'écran
+om_start_iframe_only#:#lancer classe virtuelle dans cette fenêtre de l'écran
+om_start_iframe_auto#:#secondes jusqu'à le lancement automatique de la classe virtuelle<br/>dans cette fenêtre de l'écran. S'il vous plaît connecter votre kit oreillette.
+om_start_window#:#dans une nouvelle fenêtre de l'écran
+om_start_window_only#:#lancer classe virtuelle dans une nouvelle fenêtre de l'écran
+om_start_window_auto#:#secondes jusqu'à le lancement automatique de la classe virtuelle<br/>dans une nouvelle fenêtre de l'écran. S'il vous plaît connecter votre kit oreillette.
+om_start_stop#:#annuler lancement
+om_start_disable#:#secondes jusqu'à annulation de l'option de lancement.
+om_start_disabled#:#L'option de lancement a été annulé.
+om_window_blocked#:#La classe virtuelle n'a pas pu être lancée automatiquement dans une nouvelle fenêtre de l'écran.<br/>Autoriser des fenêtres pop-up ou lancez manuellement.
+om_window_started#:#La classe virtuelle a été lancée dans une nouvelle fenêtre.
+om_window_closed#:#La classe virtuelle a été résilié.
+om_reload#:#Recharger cette page

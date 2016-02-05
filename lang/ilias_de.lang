@@ -1,0 +1,96 @@
+// 
+// German Language File for Openmeetings Plugin
+//
+<!-- language file start -->
+obj_xomv#:#Openmeetings VC
+objs_xomv#:#Openmeetings virtuelle Klassenzimmer
+obj_xomv_duplicate#:#Kopieren
+objs_xomv_duplicate#:#virtuelles Klassenzimmer kopieren
+obj_xomv_select#:#virtuelles Klassenzimmer auswählen
+xomv_add#:#virtuelles Klassenzimmer hinzufügen
+xomv_new#:#neues virtuelles Klassenzimmer hinzufügen
+xomv_read#:#lesender Zugriff auf das virtuelle Klassenzimmer
+xomv_write#:#virtuelles Klassenzimmer bearbeiten
+xomv_delete#:#virtuelles Klassenzimmer löschen
+xomv_visible#:#virtuelles Klassenzimmer ist sichtbar
+xomv_edit_permission#:#Berechtigungen ändern
+openmeetings_plugin_configuration#:#Konfiguration
+saving_invoked#:#Einstellungen gespeichert
+url#:#URL	
+port#:#Port
+username#:#Benutzername
+password#:#Passwort
+crs_create_xomv#:#virtuelles Klassenzimmer erstellen
+grp_create_xomv#:#virtuelles Klassenzimmer erstellen
+fold_create_xomv#:#virtuelles Klassenzimmer erstellen
+root_create_xomv#:#virtuelles Klassenzimmer erstellen
+cat_create_xomv#:#virtuelles Klassenzimmer erstellen
+content#:#Content#:#virtuelles Klassenzimmer erstellen
+Connect#:#verbinden
+connect_btn#:#verbinden
+comment#:#Kommentar
+properties#:#Eigenschaften
+edit_properties#:#Eigenschaften bearbeiten
+title#:#Titel
+description#:#Beschreibung
+option_one#:#Option 1
+option_two#:#Option 2
+save#:#speichern
+cancel#:#abbrechen
+edit#:#Bearbeiten
+status#:#Status
+offline#:#Offline
+rmispublic#:#Raum ist öffentlich
+rmismoderated#:#Raum ist moderiert
+rmparticipants#:#Maximale Teilnehmerzahl
+type#:#Raum-Typ
+rmisDemoRoom#:#Demoraum
+rmallowUserQuestions#:#Benutzerfragen erlauben
+rmisAudioOnly#:#Raum nur mit Audio
+rmhideTopBar#:#Topbar verbergen
+rmhideChat#:#Chat verbergen
+rmhideActivitiesAndActions#:#Aktivitäten verbergen
+rmhideFilesExplorer#:#Dateiverwaltung verbergen
+rmhideActionsMenu#:#Aktionenmenü verbergen
+rmhideScreenSharing#:#Screen Sharing verbergen
+rmhideWhiteboard#:#Whiteboard verbergen
+info_ismoderated#:#In einem moderierten Raum sind Nutzer mit dem Recht 'Einstellungen bearbeiten' beim Betreten des Raums automatisch Moderatoren.
+info_ispublic#:#Öffentliche Räume können von allen Openmeetings-Nutzern betreten werden. Diese Nutzer müssen nicht in ILIAS vorhanden sein.
+info_isDemoRoom#:#Wenn sie diese Option aktivieren, ist der Raum nur 20 Minuten geöffnet.
+info_allowUserQuestions#:#Wenn sie diese Option deaktivieren, ist die Schaltfläche zum Beantragen der Moderation für andere Teilnehmer nicht sichtbar und Sie werden nicht in ihrem Vortrag gestört.
+info_isAudioOnly#:#Mit dieser Option erlauben Sie im Raum nur Audioübertragung und schalten Video ab. Dies kann sinnvoll sein um Bandbreite zu reduzieren.
+info_hideTopBar#:#Mit dieser Option können Sie die komplette Kopfleiste (Dateien, Aktionen) verbergen.
+info_hideChat#:#Mit dieser Option können Sie den Chat verbergen. Bitte beachten Sie, dass der Chat für das Feedback von Nutzern häufig benötigt wird.
+info_hideActivitiesAndActions#:#Mit dieser Option reduzieren Sie Störungen, schränken jedoch die Feedback-Möglichkeiten von Nutzern ein.  
+info_hideFilesExplorer#:#Aktivieren Sie diese Option, wenn Sie keine Dateien bereit stellen wollen.
+info_hideActionsMenu#:#Wenn Sie diese Option aktivieren wird der Funktionsumfang deutlich reduziert.
+info_hideScreenSharing#:#Aktivieren Sie diese Option bei Sicherheitsbedenken.
+info_hideWhiteboard#:#Das Whiteboard ist in der Regel zentraler Bestandteil eines Virtuellen Klassenzimmers.
+info_om2x#:#Einstellungen für Openmeetings ab Version 2.2 (bzw. https://svn.apache.org/repos/asf/openmeetings/branches/2.x ab 26.09.2013)
+conf_isDemoRoom#:#einstellbar: Demoraum
+conf_ispublic#:#einstellbar: Öffentlich
+conf_om2x#:#Openmeetings ab 2.2
+conf_om2x_allowUserQuestions#:#einstellbar: Benutzerfragen erlauben
+conf_om2x_isAudioOnly#:#einstellbar: Raum nur mit Audio
+conf_om2x_hideTopBar#:#einstellbar: Topbar verbergen
+conf_om2x_hideChat#:#einstellbar: Chat verbergen
+conf_om2x_hideActivitiesAndActions#:#einstellbar: Aktivitäten verbergen
+conf_om2x_hideFilesExplorer#:#einstellbar: Dateiverwaltung verbergen
+conf_om2x_hideActionsMenu#:#einstellbar: Aktionsmenü verbergen
+conf_om2x_hideScreenSharing#:#einstellbar: Screen Sharing verbergen
+conf_om2x_hideWhiteboard#:#einstellbar: Whiteboard verbergen
+appname#:#Verzeichnis
+om_start_option#:#Wie möchten Sie das virtuelle Klassenzimmer starten?
+om_start_iframe#:#in diesem Bildschirmfenster
+om_start_iframe_only#:#Virtuelles Klassenzimmer in diesem Bildschirmfenster starten
+om_start_iframe_auto#:#Sekunden bis zum automatischen Start des virtuellen Klassenzimmers<br/>in diesem Bildschirmfenster. Bitte schließen Sie Ihr Headset an.
+om_start_window#:#in einem neuen Fenster
+om_start_window_only#:#Virtuelles Klassenzimmer in einem neuen Fenster starten
+om_start_window_auto#:#Sekunden bis zum automatischen Start des virtuellen Klassenzimmers<br/>in einem neuen Fenster. Bitte schließen Sie Ihr Headset an.
+om_start_stop#:#Start abbrechen
+om_start_disable#:#Sekunden bis zum Abbruch der Startmöglichkeit.
+om_start_disabled#:#Abbruch der Startmöglichkeit.
+om_window_blocked#:#Das virtuelle Klassenzimmer konnte nicht automatisch in einem neuen Fenster gestartet werden.<br/>Erlauben Sie hier Pop-up-Fenster oder starten Sie jetzt manuell.
+om_window_started#:#Das virtuelle Klassenzimmer wurde in einem neuen Fenster gestartet.
+om_window_closed#:#Das virtuelle Klassenzimmer wurde beendet.
+om_reload#:#Seite neu laden

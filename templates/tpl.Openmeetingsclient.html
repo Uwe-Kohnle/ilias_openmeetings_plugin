@@ -1,0 +1,132 @@
+{VAL_1}
+<iframe id="omFrame" width="0" height="0" frameborder=0>
+	<p>Your browser does not support iframes.</p>
+</iframe>
+<div id="omWindowBlocked" style="display:none">
+	<h2>{omWindowBlocked}</h2>
+</div>
+<div id="omStart">
+	<div id="omStartMultiple" style="display:none">
+		<h2>{omStartOption}</h2>
+		<input type="button" onClick="om_iframe()" value="{omStartIframe}"/> 
+		<input type="button" onClick="om_window()" value="{omStartWindow}"/>
+	</div>
+	<div id="omStartIframeOnly" style="display:none">
+		<input type="button" onClick="om_iframe()" value="{omStartIframeOnly}"/>
+	</div>
+	<div id="omStartWindowOnly" style="display:none">
+		<input type="button" onClick="om_window()" value="{omStartWindowOnly}"/>
+	</div>
+	<div id="omStartDisable" style="display:none">
+		<span id="omDisableSeconds"></span> {omStartDisable}
+	</div>
+	<div id="omStartAuto" style="display:none">
+		<span id="omStartSeconds"></span>
+		<span id="omStartIframeAuto" style="display:none"> {omStartIframeAuto}</span>
+		<span id="omStartWindowAuto" style="display:none"> {omStartWindowAuto}</span>
+		<br/><input type="button" onClick="om_start_stop()" value="{omStartStop}"/></div>
+</div>
+<div id="omStartDisabled" style="display:none">
+	<h2>{omStartDisabled}</h2> <input type="button" onClick="window.location.replace(window.location.href)" value="{omReload}"/>
+</div>
+<div id="omWindowStarted" style="display:none">
+	<h2>{omWindowStarted}</h2>
+</div>
+<div id="omWindowClosed" style="display:none">
+	<h2>{omWindowClosed}</h2>
+</div>
+<script type="text/javascript">
+var omCmdURL = "{cmdURL}";
+var omStartAutoAfterSeconds = 9;
+var omStartDisableAfterSeconds = 60;
+var omStartOptions = 0; //0=no selection; 1=iframe, 2=window
+var omStartAutoOption = 2; //0=no auto start; 1=iframe, 2=window
+
+function om_iframe(){
+	omStartAutoAfterSeconds = -1;
+	omStartDisableAfterSeconds = -1;
+	om_pingSession();
+	document.getElementById('omStart').style.display = "none";
+	document.getElementById('omFrame').width = "100%";
+	document.getElementById('omFrame').height = "700px";
+	document.getElementById('omFrame').src = omCmdURL;
+}
+
+function om_window(){
+	omStartAutoAfterSeconds = -1;
+	omStartDisableAfterSeconds = -1;
+	om_pingSession();
+	document.getElementById('omStart').style.display = "none";
+//	document.getElementById('omFrame').style.display = "none";
+	setTimeout("om_checkWindow()", 1000);
+	if(typeof omNewWindow == 'undefined' || omNewWindow == null || omNewWindow.closed) {
+		omNewWindow = window.open(omCmdURL,"omWindow","width=1000,height=730,left=10,top=0,location=no,menubar=no,resizable=yes,scrollbars=yes,toolbar=no");
+	}
+}
+
+function om_start_disable(){
+	if(omStartDisableAfterSeconds > 0 && omStartDisableAfterSeconds < 30){
+		document.getElementById('omStartDisable').style.display = "block";
+		document.getElementById('omDisableSeconds').innerHTML = omStartDisableAfterSeconds;
+	}
+	omStartDisableAfterSeconds--;
+	if(omStartDisableAfterSeconds == 0){
+		document.getElementById('omWindowBlocked').style.display = "none";
+		document.getElementById('omStart').style.display = "none";
+		document.getElementById('omStartDisabled').style.display = "block";
+	}
+	if(omStartDisableAfterSeconds > 0) setTimeout("om_start_disable()",1000);
+}
+
+
+function om_start_auto(){
+	document.getElementById('omStartAuto').style.display = "block";
+	if(omStartAutoOption==1) document.getElementById('omStartIframeAuto').style.display = "inline";
+	else document.getElementById('omStartWindowAuto').style.display = "inline";
+	document.getElementById('omStartSeconds').innerHTML = omStartAutoAfterSeconds;
+	omStartAutoAfterSeconds--;
+	if(omStartAutoAfterSeconds == 0){
+		if(omStartAutoOption==1) om_iframe();
+		else om_window();
+	}
+	if(omStartAutoAfterSeconds > 0) setTimeout("om_start_auto()",1000);
+}
+
+function om_start_stop(){
+	omStartAutoAfterSeconds = -1;
+	document.getElementById('omStart').style.display = "none";
+}
+
+function om_checkWindow(){
+	if(omNewWindow != null){
+		if(typeof omNewWindow == 'undefined' || omNewWindow.closed){
+			document.getElementById('omWindowStarted').style.display = "none";
+			document.getElementById('omWindowClosed').style.display = "block";
+		}
+		else {
+			setTimeout("om_checkWindow()", 1000);
+			document.getElementById('omWindowBlocked').style.display = "none";
+			document.getElementById('omWindowStarted').style.display = "block";
+		}
+	} else {
+		document.getElementById('omWindowBlocked').style.display = "block";
+		document.getElementById('omStart').style.display = "block";
+		document.getElementById('omStartAuto').style.display = "none";
+	}
+}
+
+function om_pingSession(){
+	var xhttp = new XMLHttpRequest();
+	xhttp.open('GET', './index.php', true);
+	xhttp.send();
+	setTimeout("om_pingSession()", 600000);
+}
+
+if (omStartOptions == 1) document.getElementById('omStartIframeOnly').style.display = "block";
+else if (omStartOptions == 2) document.getElementById('omStartWindowOnly').style.display = "block";
+else document.getElementById('omStartMultiple').style.display = "block";
+
+if (omStartAutoOption > 0) om_start_auto();
+om_start_disable();
+</script>
+
