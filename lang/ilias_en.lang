@@ -25,6 +25,7 @@ grp_create_xomv#:#Create Openmeetings Virtual Classroom
 fold_create_xomv#:#Create Openmeetings Virtual Classroom
 root_create_xomv#:#Create Openmeetings Virtual Classroom
 cat_create_xomv#:#Create Openmeetings Virtual Classroom
+rbac_create_xomv#:#Create Openmeetings Virtual Classroom
 content#:#Content#:#Create Openmeetings Virtual Classroom
 Connect#:#Connect
 connect_btn#:#connect
@@ -66,7 +67,7 @@ info_hideFilesExplorer#:#Activate this option if you don't want to supply files.
 info_hideActionsMenu#:#If this option is activated, the functionality is reduced remarkably.
 info_hideScreenSharing#:#This option can be activated if security concerns exist.
 info_hideWhiteboard#:#In general the whiteboard is an integral part of the virtual classroom.
-info_om2x#:#Configuration options for Openmeetings 2.2 or higher (or https://svn.apache.org/repos/asf/openmeetings/branches/2.x since 26.09.2013)
+info_om2x#:#Configuration options for Openmeetings 2.2 or higher
 conf_isDemoRoom#:#Demo room
 conf_ispublic#:#Public
 conf_om2x#:#Openmeetings 2.2 or higher

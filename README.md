@@ -1,14 +1,17 @@
-Instructions
-Install Openmetings as per instructions  at www.openmetings.org
-Create administrative user in open meetings
-Install openmetings plugin to ILIAS in ./Customizing/global/plugins/Services/Repository/RepositoryObject"
+# Instructions
+
+Install Openmetings as per instructions at http://openmeetings.apache.org/
+
+Create administrative user in openmeetings with right 'Soap'.
+
+Install openmetings plugin to ILIAS in ./Customizing/global/plugins/Services/Repository/RepositoryObject/Openmeetings
 
 Complete configuration screen on ILIAS
-	Put full URL including "http://"
-	Put port Default is 5080
-	Put appname Default is 'openmeetings'
-	Put admin user
-	Put admin password
+* Set full URL including "http://".
+* Set port. Default is 5080.
+* Set directory. Default is 'openmeetings'.
+* Set username.
+* Set password.
 
-Openmeetings room is now available as a repository object within ILIAS
+Openmeetings room is now available as a repository object within ILIAS.
  

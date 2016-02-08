@@ -25,6 +25,7 @@ grp_create_xomv#:#virtuelles Klassenzimmer erstellen
 fold_create_xomv#:#virtuelles Klassenzimmer erstellen
 root_create_xomv#:#virtuelles Klassenzimmer erstellen
 cat_create_xomv#:#virtuelles Klassenzimmer erstellen
+rbac_create_xomv#:#virtuelles Klassenzimmer erstellen
 content#:#Content#:#virtuelles Klassenzimmer erstellen
 Connect#:#verbinden
 connect_btn#:#verbinden
@@ -66,7 +67,7 @@ info_hideFilesExplorer#:#Aktivieren Sie diese Option, wenn Sie keine Dateien ber
 info_hideActionsMenu#:#Wenn Sie diese Option aktivieren wird der Funktionsumfang deutlich reduziert.
 info_hideScreenSharing#:#Aktivieren Sie diese Option bei Sicherheitsbedenken.
 info_hideWhiteboard#:#Das Whiteboard ist in der Regel zentraler Bestandteil eines Virtuellen Klassenzimmers.
-info_om2x#:#Einstellungen für Openmeetings ab Version 2.2 (bzw. https://svn.apache.org/repos/asf/openmeetings/branches/2.x ab 26.09.2013)
+info_om2x#:#Einstellungen für Openmeetings ab Version 2.2
 conf_isDemoRoom#:#einstellbar: Demoraum
 conf_ispublic#:#einstellbar: Öffentlich
 conf_om2x#:#Openmeetings ab 2.2

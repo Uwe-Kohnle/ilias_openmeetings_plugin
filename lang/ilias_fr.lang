@@ -25,7 +25,8 @@ grp_create_xomv#:#Creer Openmeetings Virtual Classroom
 fold_create_xomv#:#Creer Openmeetings Virtual Classroom
 root_create_xomv#:#Creer Openmeetings Virtual Classroom
 cat_create_xomv#:#Creer Openmeetings Virtual Classroom
-content#:#Content#:#Create Openmeetings Virtual Classroom
+rbac_create_xomv#:#Creer Openmeetings Virtual Classroom
+content#:#Content#:#Creer Openmeetings Virtual Classroom
 Connect#:#Connexion
 connect_btn#:#Connexion
 comment#:#Commentaire

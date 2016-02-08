@@ -1,5 +1,8 @@
 ILIAS Openmetings Plugin Change Log
 
+ver 1.0.11
+minor bugfixes
+
 ver 1.0.10
 support for ILIAS 5.1
 

@@ -32,6 +32,9 @@ include_once('./Customizing/global/plugins/Services/Repository/RepositoryObject/
 
 class ilOpenmeetingsREST {
 
+	var $session_id = "";
+	var $b_logWrite = false;
+
 	function __construct() {
 		global $CFG;
 		include_once("./Customizing/global/plugins/Services/Repository/RepositoryObject/Openmeetings/classes/class.ilOpenmeetingsConfig.php");
@@ -47,7 +50,6 @@ class ilOpenmeetingsREST {
 		);
 	}
 
-	var $session_id = "";
 
 	function getModuleKey() {
 		$iliasDomain = substr(ILIAS_HTTP_PATH,7);
@@ -101,7 +103,7 @@ class ilOpenmeetingsREST {
 
 		$call = $this->getUrl()."/services/UserService/getSession";
 		$response = $restService->call($call,"session_id");
-		$GLOBALS['ilLog']->write(__METHOD__.': call: '.$call.' result: '.$response);
+		if ($this->b_logWrite == true) $GLOBALS['ilLog']->write(__METHOD__.': call: '.$call.' result: '.$response);
 
 		if ($restService->getError()) {
 			echo '<h2>Fault (Expect - The request contains an invalid SOAP body)</h2><pre>'; print_r($result); echo '</pre>';
@@ -116,7 +118,7 @@ class ilOpenmeetingsREST {
 						. "&username=" . urlencode($CFG->openmeetings_openmeetingsAdminUser)
 						. "&userpass=" . urlencode($CFG->openmeetings_openmeetingsAdminUserPass);
 				$result = $restService->call($call);
-//				$GLOBALS['ilLog']->write(__METHOD__.': call: '.$call.' result: '.$result);
+				if ($this->b_logWrite == true) $GLOBALS['ilLog']->write(__METHOD__.': call: '.$call.' result: '.$result);
 
 				if ($restService->getError()) {
 					echo '<h2>Fault (Expect - The request contains an invalid REST body)</h2><pre>'; print_r($result); echo '</pre>';
@@ -131,7 +133,7 @@ class ilOpenmeetingsREST {
 			}
 		}
 
-		$GLOBALS['ilLog']->write(__METHOD__.': returns: '.$returnValue);
+		if ($this->b_logWrite == true) $GLOBALS['ilLog']->write(__METHOD__.': returns: '.$returnValue);
 
 		if ($returnValue>0){
 			return true;
@@ -171,7 +173,7 @@ class ilOpenmeetingsREST {
 				'&isDemoRoom='.$this->var_to_str($openmeetings->isDemoRoom).
 				'&demoTime='.$openmeetings->demoTime.
 				"&isModeratedRoom=".$this->var_to_str($openmeetings->isModeratedRoom);
-		//$GLOBALS['ilLog']->write(__METHOD__.': '.$call);
+		if ($this->b_logWrite == true) $GLOBALS['ilLog']->write(__METHOD__.': '.$call);
 		$result = $restService->call($call);
 
 		if ($restService->fault()) {
@@ -244,7 +246,7 @@ class ilOpenmeetingsREST {
 				"&becomeModeratorAsInt=".$becomeModerator.
 				"&showAudioVideoTestAsInt=1".
 				"&allowRecording=".$this->var_to_str($allowRecording);
-		//$GLOBALS['ilLog']->write(__METHOD__.': '.$call);
+		if ($this->b_logWrite == true) $GLOBALS['ilLog']->write(__METHOD__.': '.$call);
 		$result = $restService->call($call);
 
 		if ($restService->fault) {
@@ -267,7 +269,7 @@ class ilOpenmeetingsREST {
 		$call = $this->getUrl()."/services/RoomService/deleteRoom?" .
 				"SID=".$this->session_id.
 				"&rooms_id=".$rooms_id;
-		//$GLOBALS['ilLog']->write(__METHOD__.': '.$call);
+		if ($this->b_logWrite == true) $GLOBALS['ilLog']->write(__METHOD__.': '.$call);
 
 		$restService = new openmeetings_rest_service();
 		$err = $restService->getError();
@@ -417,7 +419,7 @@ class ilOpenmeetingsREST {
 
 		$call = $this->getUrl()."/services/RoomService/getRoomTypes?SID=".$this->session_id;
 		$result = $restService->call($call,"");
-		$GLOBALS['ilLog']->write(__METHOD__.': call: '.$call);
+		if ($this->b_logWrite == true) $GLOBALS['ilLog']->write(__METHOD__.': call: '.$call);
 		if ($restService->getError()) {
 			echo '<h2>Fault : Rest Service Error</h2><pre>'; print_r($result); echo '</pre>';
 		} else {
@@ -446,7 +448,7 @@ class ilOpenmeetingsREST {
 	function getObjectsFromOpenmeetingsDOM($dom){
 		// var_dump($dom);
 		$xml = new SimpleXMLElement ($dom->saveXML());
-		$spaceNames = $xml->getNameSpaces (true);
+		$spaceNames = $xml->getNamespaces(true);
 		$spaceName = "";
 		foreach ($spaceNames as $key => $value){
 			if (strcmp ($key, "ns") == 0) continue;
@@ -489,8 +491,18 @@ class ilOpenmeetingsREST {
 		$omObj->rooms_id = $ret->id; 
 		$omObj->name = $ret->name; 
 		$omObj->numberOfPartizipants = $ret->numberOfPartizipants; 
-		$omObj->roomtype->name = $xml->children('ns', true)->return[0]->children($spaceName, true)->roomtype[0]->children("ax215", true)->name;
-		$omObj->roomtype->roomtypes_id = $xml->children('ns', true)->return[0]->children($spaceName, true)->roomtype[0]->children("ax215", true)->roomtypes_id;
+		// $omObj->roomtype->name = $xml->children('ns', true)->return[0]->children($spaceName, true)->roomtype[0]->children("ax215", true)->name;
+		// $omObj->roomtype->roomtypes_id = $xml->children('ns', true)->return[0]->children($spaceName, true)->roomtype[0]->children("ax215", true)->roomtypes_id;
+		//3.0.7
+		$subSpaceName = "";
+		$subSpaceNames=$xml->children('ns', true)->return[0]->children($spaceName, true)->roomtype[0]->getNamespaces(true);
+		foreach ($subSpaceNames as $key2 => $value2){
+			if (strcmp ($key2, $spaceName) == 0) continue;
+			if (strcmp ($key2, "xsi") == 0) continue;
+			if ($subSpaceName == "") $subSpaceName = $key2;
+		}
+		$omObj->roomtype->name = $xml->children('ns', true)->return[0]->children($spaceName, true)->roomtype[0]->children($subSpaceName, true)->name;
+		$omObj->roomtype->roomtypes_id = $xml->children('ns', true)->return[0]->children($spaceName, true)->roomtype[0]->children($subSpaceName, true)->roomtypes_id;
 		//3.0.6 to test 3.0.5
 		$omObj->allowUserQuestions = $ret->allowUserQuestions;
 		$omObj->demoTime = $ret->demoTime;
@@ -518,7 +530,7 @@ class ilOpenmeetingsREST {
 		$call = $this->getUrl()."/services/RoomService/getRoomById?SID=".$this->session_id. "&rooms_id=".$roomId;
 		$result = $restService->call($call,"");
 		// var_dump($call);
-		// $GLOBALS['ilLog']->write(__METHOD__.': call: '.$call);
+		if ($this->b_logWrite == true) $GLOBALS['ilLog']->write(__METHOD__.': call: '.$call);
 		if ($restService->getError()) {
 			echo '<h2>Fault (Expect - The request contains an invalid REST body)</h2><pre>'; print_r($result); echo '</pre>';
 		} else {
@@ -562,7 +574,7 @@ class ilOpenmeetingsREST {
 				"&hideScreenSharing=".$this->var_to_str($openmeetings->hideScreenSharing) .
 				"&hideWhiteboard=".$this->var_to_str($openmeetings->hideWhiteboard);
 		// var_dump($call);
-		// $GLOBALS['ilLog']->write(__METHOD__.': '.$call);
+		if ($this->b_logWrite == true) $GLOBALS['ilLog']->write(__METHOD__.': '.$call);
 		$result = $restService->call($call);
 
 		if ($restService->fault()) {
